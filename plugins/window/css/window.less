@@ -1,0 +1,23 @@
+@winbgcolor:#000;
+@alpha:0.5;
+@iealpha:@alpha*100;
+
+body{
+  margin: 0px;
+  padding: 0px;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+#winbg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: @winbgcolor;
+  filter: alpha(opacity=@iealpha);
+  -moz-opacity: @alpha;
+  -khtml-opacity:@alpha;
+  opacity: @alpha;
+}
