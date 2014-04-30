@@ -1,14 +1,12 @@
 @winbgcolor:#000;
 @alpha:0.5;
 @iealpha:@alpha*100;
-
 body{
   margin: 0px;
   padding: 0px;
   font-weight: normal;
   font-size: 12px;
 }
-
 #winbg{
   position: absolute;
   width: 100%;
@@ -20,4 +18,31 @@ body{
   -moz-opacity: @alpha;
   -khtml-opacity:@alpha;
   opacity: @alpha;
+  z-index: 9000;
+}
+#winbox{
+  font-size: 12px;
+  position: absolute;
+  background-color: #ffffff;
+  padding: 5px;
+  border: 1px solid #99BBE8;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  z-index: 90001;
+}
+.title-font {
+  display: inline-block;
+  text-align: left;
+  font-weight: normal;
+  font-size: 12px;
+  text-indent: 10px;
+  line-height: 20px;
+}
+.wincontent{
+  padding:5px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  word-break:break-all;
 }

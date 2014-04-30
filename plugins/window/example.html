@@ -6,16 +6,104 @@
     <script src="../jquery/jquery-1.8.0.js"></script>
     <script src="ys.window.js"></script>
     <link href="css/window.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <style>
         body{ margin: auto; padding: auto; text-align: center; padding-top: 100px;}
+        #name{ display: none; }
     </style>
 </head>
 <body>
     <input type="button" id="openWindow" value="openWindow"/>
+    <div id="name">This is free open-source bootstrap 3 theme for you.<br>
+        Licensed under GPL v3.<br>
+
+        DevOOPS (devoopsme@gmail.com)<br>
+
+        http://devoops.me<br>
+
+        GIT https://github.com/devoopsme/devoops<br>
+
+        Used plugins<br>
+
+        jQuery-Knob http://anthonyterrien.com/knob/ (MIT or GPL)  1.2.5<br>
+        D3 http://d3js.org/ 3.4.1 AS IS<br>
+        Select2 https://github.com/ivaynberg/select2  3.4.5 GPL2<br>
+        Bootstrap Validator https://github.com/nghuuphuoc/bootstrapvalidator 0.2.3 MIT<br>
+        TinyMCE http://www.tinymce.com 4.0.16 GPL2<br>
+        jQuery Timepicker http://trentrichardson.com/examples/timepicker/ 1.4.3 MIT<br>
+        xCharts http://tenxer.github.io/xcharts/ 0.3.0 AS IS<br>
+        Fancybox http://fancyapps.com/fancybox/ 2.1.5 ?<br>
+        Widen FineUploader https://github.com/Widen/fine-uploader  (GPL3) v 4.3.1<br>
+        Datatables  http://datatables.net 1.9.4 GPL or BSD<br>
+        jQuery-UI 1.10.4<br>
+        Twitter Bootstrap http://getbootstrap.com 3.1.0<br>
+        Flot www.flotcharts.org  0.8.2 AS IS<br>
+        Fullcalendar http://arshaw.com/fullcalendar 2.0..0beta MIT<br>
+        Moment http://momentjs.com/ 2.5.1 MIT<br>
+        Justified Gallery https://github.com/miromannino/Justified-Gallery 2.1 Creative Commons 3.0<br>
+        Morris Charts http://www.oesmith.co.uk/morris.js/ v0.4.3 MIT<br>
+        Licensed under GPL v3.<br>
+
+        DevOOPS (devoopsme@gmail.com)<br>
+
+        http://devoops.me<br>
+
+        GIT https://github.com/devoopsme/devoops<br>
+
+        Used plugins<br>
+
+        jQuery-Knob http://anthonyterrien.com/knob/ (MIT or GPL)  1.2.5<br>
+        D3 http://d3js.org/ 3.4.1 AS IS<br>
+        Select2 https://github.com/ivaynberg/select2  3.4.5 GPL2<br>
+        Bootstrap Validator https://github.com/nghuuphuoc/bootstrapvalidator 0.2.3 MIT<br>
+        TinyMCE http://www.tinymce.com 4.0.16 GPL2<br>
+        jQuery Timepicker http://trentrichardson.com/examples/timepicker/ 1.4.3 MIT<br>
+        xCharts http://tenxer.github.io/xcharts/ 0.3.0 AS IS<br>
+        Fancybox http://fancyapps.com/fancybox/ 2.1.5 ?<br>
+        Widen FineUploader https://github.com/Widen/fine-uploader  (GPL3) v 4.3.1<br>
+        Datatables  http://datatables.net 1.9.4 GPL or BSD<br>
+        jQuery-UI 1.10.4<br>
+        Twitter Bootstrap http://getbootstrap.com 3.1.0<br>
+        Flot www.flotcharts.org  0.8.2 AS IS<br>
+        Fullcalendar http://arshaw.com/fullcalendar 2.0..0beta MIT<br>
+        Moment http://momentjs.com/ 2.5.1 MIT<br>
+        Justified Gallery https://github.com/miromannino/Justified-Gallery 2.1 Creative Commons 3.0<br>
+        Morris Charts http://www.oesmith.co.uk/morris.js/ v0.4.3 MIT<br>
+        Licensed under GPL v3.<br>
+
+        DevOOPS (devoopsme@gmail.com)<br>
+
+        http://devoops.me<br>
+
+        GIT https://github.com/devoopsme/devoops<br>
+
+        Used plugins<br>
+
+        jQuery-Knob http://anthonyterrien.com/knob/ (MIT or GPL)  1.2.5<br>
+        D3 http://d3js.org/ 3.4.1 AS IS<br>
+        Select2 https://github.com/ivaynberg/select2  3.4.5 GPL2<br>
+        Bootstrap Validator https://github.com/nghuuphuoc/bootstrapvalidator 0.2.3 MIT<br>
+        TinyMCE http://www.tinymce.com 4.0.16 GPL2<br>
+        jQuery Timepicker http://trentrichardson.com/examples/timepicker/ 1.4.3 MIT<br>
+        xCharts http://tenxer.github.io/xcharts/ 0.3.0 AS IS<br>
+        Fancybox http://fancyapps.com/fancybox/ 2.1.5 ?<br>
+        Widen FineUploader https://github.com/Widen/fine-uploader  (GPL3) v 4.3.1<br>
+        Datatables  http://datatables.net 1.9.4 GPL or BSD<br>
+        jQuery-UI 1.10.4<br>
+        Twitter Bootstrap http://getbootstrap.com 3.1.0<br>
+        Flot www.flotcharts.org  0.8.2 AS IS<br>
+        Fullcalendar http://arshaw.com/fullcalendar 2.0..0beta MIT<br>
+        Moment http://momentjs.com/ 2.5.1 MIT<br>
+        Justified Gallery https://github.com/miromannino/Justified-Gallery 2.1 Creative Commons 3.0<br>
+        Morris Charts http://www.oesmith.co.uk/morris.js/ v0.4.3 MIT<br>
+    </div>
 </body>
 <script>
+    function co(){
+        console.log($("#winiframe").contents().find("#m").html());
+    }
     $("#openWindow").click(function(){
-        $(".name").window();
+        $.window({width:800,height:600,title:"弹出窗口示例",url:"index.html"});
     });
 </script>
 </html>

@@ -15,4 +15,30 @@ body {
   -moz-opacity: 0.5;
   -khtml-opacity: 0.5;
   opacity: 0.5;
+  z-index: 9000;
+}
+#winbox {
+  font-size: 12px;
+  position: absolute;
+  background-color: #ffffff;
+  padding: 5px;
+  border: 1px solid #99BBE8;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  z-index: 90001;
+}
+.title-font {
+  display: inline-block;
+  text-align: left;
+  font-weight: normal;
+  font-size: 12px;
+  text-indent: 10px;
+  line-height: 20px;
+}
+.wincontent {
+  padding: 5px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  word-break: break-all;
 }
