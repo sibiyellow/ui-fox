@@ -6,7 +6,6 @@
     window.fn=window.prototype={
         _id:null,
         _init:function(){
-            console.log("调用一次!")
             var doc=top.document;
             $(doc).find("body").append("<div id='winbg'></div>");
         }
