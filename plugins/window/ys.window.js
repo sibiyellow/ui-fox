@@ -5,6 +5,7 @@
     };
     window.fn=window.prototype={
         _id:null,
+<<<<<<< HEAD
         _setting:{
             width:"auto",     //50%
             height:"auto",   //50%
@@ -30,6 +31,9 @@
         },
         _append:function(config){
             var setting=this._setting;
+=======
+        _init:function(){
+>>>>>>> 9d7397f4e166a56c1444c9e7474f1f872810509c
             var doc=top.document;
             if(setting.width=="auto") setting.width=$(doc).width()/2;
             if(setting.height=="auto") setting.height=$(doc).height()/2;
