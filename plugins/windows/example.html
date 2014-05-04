@@ -1,0 +1,469 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>window</title>
+    <script src="../jquery/jquery-1.8.0.js"></script>
+    <script src="ys.windows.js"></script>
+    <script src="../image/ys.image.js"></script>
+    <link href="css/windows.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <script></script>
+    <script></script>
+    <link />
+    <style>
+        body{ margin: auto; padding: auto; text-align: left; padding: 15px;}
+        table{ border-collapse:collapse;}
+        table tr{ line-height: 25px;}
+        table tr th{  text-indent: 8px; background: #408FCC; color: #ffffff}
+        table tr td{  text-indent: 8px;}
+    </style>
+</head>
+<body>
+    <div class="demo" style=" display:none;">
+        <img src="images/demo.jpg" border="0">
+    </div>
+    <h1>Ys.Fac.Windows.js</h1>
+    &nbsp;<h3>Options</h3>
+    <table width="100%" border="1">
+        <thead>
+        <tr>
+            <th>Options</th>
+            <th>Default</th>
+            <th>Allowed</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tr>
+            <td>width</td>
+            <td>'auto' </td>
+            <td>Please enter a number</td>
+            <td>Change the width of modal box. (Please enter a number.)</td>
+        </tr>
+        <tr>
+            <td>height</td>
+            <td>'auto'</td>
+            <td>Please enter a number</td>
+            <td>Change the height of modal box. (Please enter a number.)</td>
+        </tr>
+        <tr>
+            <td>top</td>
+            <td>'auto' (50%)</td>
+            <td>Please enter a number</td>
+            <td>Change the top position of modal box. (Please enter a number.)</td>
+        </tr>
+        <tr>
+            <td>left</td>
+            <td>'auto' (50%)</td>
+            <td>Please enter a number</td>
+            <td>Change the left position of modal box. (Please enter a number.)</td>
+        </tr>
+        <tr>
+            <td>title</td>
+            <td>''</td>
+            <td>Please enter a string</td>
+            <td>Change the title of modal box. (Please enter a string.)</td>
+        </tr>
+        <tr>
+            <td>url</td>
+            <td>''</td>
+            <td>Please enter a link address</td>
+            <td>Load document by a link address in modal box.(Please enter a string.)</td>
+        </tr>
+        <tr>
+            <td>color</td>
+            <td>'#000000'</td>
+            <td>Please enter a color string</td>
+            <td>Change the mask layer's color of modal box.(Please enter a color string.)</td>
+        </tr>
+        <tr>
+            <td>speed</td>
+            <td>1000(ms)</td>
+            <td>Please enter a number</td>
+            <td>Change the mask layer appeared speed of modal box.</td>
+        </tr>
+        <tr>
+            <td>opacity</td>
+            <td>''</td>
+            <td>Please enter a floating point number between 0-1.</td>
+            <td>Change the mask layer's opacity of modal box.</td>
+        </tr>
+        <tr>
+            <td>showClose</td>
+            <td>true</td>
+            <td>true|false</td>
+            <td>Whether to show the close button of modal box.</td>
+        </tr>
+        <tr>
+            <td>closeByEsc</td>
+            <td>true</td>
+            <td>true|false</td>
+            <td>Allow the user to close the modal box by pressing 'ESC'</td>
+        </tr>
+        <tr>
+            <td>closeByBody</td>
+            <td>true</td>
+            <td>true|false.</td>
+            <td>Allow the user to close the modal box by clicking outside of modal box.</td>
+        </tr>
+    </table>
+    &nbsp;<h3>Callback functions</h3>
+    <table width="100%" border="1">
+        <thead>
+        <tr>
+            <th>Functions</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tr>
+            <td>onOpen</td>
+            <td>This callback function will be fired just after modal box is successfully open.</td>
+        </tr>
+        <tr>
+            <td>onClose</td>
+            <td>This callback function will be fired just after modal box is successfully close.</td>
+        </tr>
+    </table>
+    &nbsp;<h3>Methods</h3>
+    <span>Global Method:$.window.close()</span><br><br>
+    <table width="100%" border="1">
+        <thead>
+        <tr>
+            <th>Method</th>
+            <th>Arguments</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tr>
+            <td>close</td>
+            <td>true|false</td>
+            <td>Close all currently opened modal box. Called by $.window.close()..</td>
+        </tr>
+    </table>
+    &nbsp;<h3>Examples</h3>
+    <h4>1、A simplest one</h4>
+    <pre class="brush: js;">
+        $(".demo").windows();
+    </pre>
+    <input id="demo1" type="button" value="Click me for demo"/><br />
+    <h4>2、Modal box with defined width and height</h4>
+    <pre class="brush: js;">
+        $(".demo").windows({
+            width:300,
+            height:200
+        });
+    </pre>
+    <input id="demo2" type="button" value="Click me for demo"/><br />
+    <h4>3、Modal box with defined  title</h4>
+    <pre class="brush: js;">
+        $(".demo").windows({
+            width:500,
+            height:300,
+            title:"Modal Box Example"
+        });
+    </pre>
+    <input id="demo3" type="button" value="Click me for demo"/><br />
+    <h4>4、Modal box with defined left and top</h4>
+    <pre class="brush: js;">
+        $(".demo").windows({
+            width:500,
+            height:300,
+            title:"Modal Box Example",
+            left:100,
+            top:200
+        });
+    </pre>
+    <input id="demo4" type="button" value="Click me for demo"/><br />
+    <h4>5、Modal box with defined url for Embedded iframe</h4>
+    <pre class="brush: js;">
+        $.windows({
+            width:500,
+            height:300,
+            title:"Modal Box Example",
+            url:"index.html"
+        });
+    </pre>
+    <input id="demo5" type="button" value="Click me for demo"/><br />
+    <h4>6、Modal box with defined color</h4>
+    <pre class="brush: js;">
+        $.windows({
+            width:500,
+            height:300,
+            title:"Modal Box Example",
+            url:"index.html",
+            color:"red"
+        });
+    </pre>
+    <input id="demo6" type="button" value="Click me for demo"/><br />
+    <h4>7、Modal box with defined speed</h4>
+    <pre class="brush: js;">
+        $.windows({
+            width:500,
+            height:300,
+            title:"Modal Box Example",
+            url:"index.html",
+            speed:2000
+        });
+    </pre>
+    <input id="demo7" type="button" value="Click me for demo"/><br />
+    <h4>8、Modal box with defined opacity</h4>
+    <pre class="brush: js;">
+        $.windows({
+            width:500,
+            height:300,
+            title:"Modal Box Example",
+            url:"index.html",
+            speed:2000,
+            opacity:0.5
+        });
+    </pre>
+    <input id="demo8" type="button" value="Click me for demo"/><br />
+    <h4>9、Modal box with defined showClose</h4>
+    <pre class="brush: js;">
+        $.windows({
+            width:500,
+            height:300,
+            title:"Modal Box Example",
+            url:"index.html",
+            showClose:false
+        });
+    </pre>
+    <input id="demo9" type="button" value="Click me for demo"/><br />
+    <h4>10、Modal box with defined closeByEsc</h4>
+    <pre class="brush: js;">
+        $.windows({
+            width:500,
+            height:300,
+            title:"Modal Box Example",
+            url:"index.html",
+            closeByEsc:false
+        });
+    </pre>
+    <input id="demo10" type="button" value="Click me for demo"/><br />
+    <h4>11、Modal box with defined closeByEsc</h4>
+    <pre class="brush: js;">
+        $.windows({
+            width:500,
+            height:300,
+            title:"Modal Box Example",
+            url:"index.html",
+            closeByBody:false
+        });
+    </pre>
+    <input id="demo11" type="button" value="Click me for demo"/><br />
+    <h4>12、Modal box with defined callback function 'onOpen'</h4>
+    <pre class="brush: js;">
+        $.windows({
+            width:500,
+            height:300,
+            title:"Modal Box Example",
+            url:"index.html",
+            onOpen:function(){
+                alert("onOpen")
+            }
+        });
+    </pre>
+    <input id="demo12" type="button" value="Click me for demo"/><br />
+    <h4>13、Modal box with defined callback function 'onOpen'</h4>
+    <pre class="brush: js;">
+        $.windows({
+            width:500,
+            height:300,
+            title:"Modal Box Example",
+            url:"index.html",
+            onClose:function(){
+                alert("onClose")
+            }
+        });
+    </pre>
+    <input id="demo13" type="button" value="Click me for demo"/><br />
+    <h4>14、Modal box with defined callback function 'onOpen'</h4>
+    <pre class="brush: js;">
+        $.windows({
+             width:500,
+             height:300,
+             title:"Modal Box Example",
+             url:"index.html",
+             onClose:function(){
+                 alert("onClose")
+             }
+        });
+        setTimeout("$.windows.close()",5000);
+    </pre>
+    <input id="demo14" type="button" value="Click me for demo"/><br />
+    <h4>15、Pop up more than 1 Modal box</h4>
+    <pre class="brush: js;">
+         $.windows({
+             width:800,
+             height:600,
+             title:"Modal Box Example one",
+             url:"index.html",
+             closeByBody:false
+         });
+         $(".demo").windows({
+            width:500,
+            height:300,
+            title:"Modal Box Example two",
+            closeByBody:false
+        });
+    </pre>
+    <input id="demo15" type="button" value="Click me for demo"/><br />
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        if(!$.browser.msie){
+            $("<link>")
+                    .attr({ rel: "stylesheet",
+                        type: "text/css",
+                        href: "../codecolor/shCoreDefault.css"
+                    })
+                    .appendTo("head");
+            $("<script>")
+                    .attr({ type: "text/javascript",
+                        src: "../codecolor/shCore.js"
+                    })
+                    .appendTo("head");
+            $("<script>")
+                    .attr({ type: "text/javascript",
+                        src: "../codecolor/shBrushJScript.js"
+                    })
+                    .appendTo("head");
+            SyntaxHighlighter.all();    //代码着色
+        }
+        $("#demo1").click(function(){
+            $(".demo").windows();
+        });
+        $("#demo2").click(function(){
+            $(".demo").windows({
+                width:300,
+                height:200
+            });
+        });
+        $("#demo3").click(function(){
+            $(".demo").windows({
+                width:500,
+                height:300,
+                title:"Modal Box Example"
+            });
+        });
+        $("#demo4").click(function(){
+            $(".demo").windows({
+                width:500,
+                height:300,
+                title:"Modal Box Example",
+                left:100,
+                top:200
+            });
+        });
+        $("#demo5").click(function(){
+            $.windows({
+                width:500,
+                height:300,
+                title:"Modal Box Example",
+                url:"index.html"
+            });
+        });
+        $("#demo6").click(function(){
+            $.windows({
+                width:500,
+                height:300,
+                title:"Modal Box Example",
+                url:"index.html",
+                color:"red"
+            });
+        });
+        $("#demo7").click(function(){
+            $.windows({
+                width:500,
+                height:300,
+                title:"Modal Box Example",
+                url:"index.html",
+                speed:2000
+            });
+        });
+        $("#demo8").click(function(){
+            $.windows({
+                width:500,
+                height:300,
+                title:"Modal Box Example",
+                url:"index.html",
+                speed:2000,
+                opacity:0.5
+            });
+        });
+        $("#demo9").click(function(){
+            $.windows({
+                width:500,
+                height:300,
+                title:"Modal Box Example",
+                url:"index.html",
+                showClose:false
+            });
+        });
+        $("#demo10").click(function(){
+            $.windows({
+                width:500,
+                height:300,
+                title:"Modal Box Example",
+                url:"index.html",
+                closeByEsc:false
+            });
+        });
+        $("#demo11").click(function(){
+            $.windows({
+                width:500,
+                height:300,
+                title:"Modal Box Example",
+                url:"index.html",
+                closeByBody:false
+            });
+        });
+        $("#demo12").click(function(){
+            $.windows({
+                width:500,
+                height:300,
+                title:"Modal Box Example",
+                url:"index.html",
+                onOpen:function(){
+                    alert("onOpen")
+                }
+            });
+        });
+        $("#demo13").click(function(){
+            $.windows({
+                width:500,
+                height:300,
+                title:"Modal Box Example",
+                url:"index.html",
+                onClose:function(){
+                    alert("onClose")
+                }
+            });
+        });
+        $("#demo14").click(function(){
+            $.windows({
+                width:500,
+                height:300,
+                title:"Modal Box Example",
+                url:"index.html"
+            });
+            setTimeout("$.windows.close()",5000);
+        });
+        $("#demo15").click(function(){
+            $.windows({
+                width:800,
+                height:600,
+                title:"Modal Box Example one",
+                url:"index.html",
+                closeByBody:false
+            });
+            $(".demo").windows({
+                width:500,
+                height:300,
+                title:"Modal Box Example two",
+                closeByBody:false
+            });
+        });
+    });
+</script>
+</html>
