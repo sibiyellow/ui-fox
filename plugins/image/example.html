@@ -1,1 +1,117 @@
-$.image.load({id:".wincontent",width:600,height:450,loading: "http://pic002.cnblogs.com/images/2012/155618/2012062710243954.gif"});
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>image</title>
+    <script src="../jquery/jquery-1.8.0.js"></script>
+    <script src="ys.image.js"></script>
+    <script src="../windows/ys.windows.js"></script>
+    <link href="../windows/css/windows.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <script></script>
+    <script></script>
+    <link />
+    <style>
+        body{ margin: auto; padding: auto; text-align: left; padding: 15px;}
+        table{ border-collapse:collapse;}
+        table tr{ line-height: 25px;}
+        table tr th{  text-indent: 8px; background: #408FCC; color: #ffffff}
+        table tr td{  text-indent: 8px;}
+    </style>
+</head>
+<body>
+    <div class="demo" style=" display: none;">
+        <img src="images/2.jpg" border="0"/>
+        <img src="images/2.jpg" border="0"/>
+        <img src="images/3.jpg" border="0"/>
+        <img src="images/8.jpg" border="0"/>
+        <img src="images/9.jpg" border="0"/>
+        <img src="images/10.jpg" border="0"/>
+        <img src="images/2.jpg" border="0"/>
+        <img src="images/2.jpg" border="0"/>
+        <img src="images/3.jpg" border="0"/>
+        <img src="images/8.jpg" border="0"/>
+        <img src="images/9.jpg" border="0"/>
+        <img src="images/10.jpg" border="0"/>
+        <img src="images/2.jpg" border="0"/>
+        <img src="images/2.jpg" border="0"/>
+        <img src="images/3.jpg" border="0"/>
+        <img src="images/8.jpg" border="0"/>
+        <img src="images/9.jpg" border="0"/>
+        <img src="images/10.jpg" border="0"/>
+        <img src="images/2.jpg" border="0"/>
+        <img src="images/2.jpg" border="0"/>
+        <img src="images/3.jpg" border="0"/>
+        <img src="images/8.jpg" border="0"/>
+        <img src="images/9.jpg" border="0"/>
+        <img src="images/10.jpg" border="0"/>
+    </div>
+    <h1>Ys.Fac.Image.js</h1>
+    &nbsp;<h3>Options</h3>
+    <table width="100%" border="1">
+        <thead>
+        <tr>
+            <th>Options</th>
+            <th>Default</th>
+            <th>Allowed</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tr>
+            <td>id</td>
+            <td>'' </td>
+            <td>Please enter a string</td>
+            <td>the selector of the images</td>
+        </tr>
+        <tr>
+            <td>width</td>
+            <td>'auto' </td>
+            <td>Please enter a number</td>
+            <td>Set max width of the image.. (Please enter a number.)</td>
+        </tr>
+        <tr>
+            <td>height</td>
+            <td>'auto'</td>
+            <td>Please enter a number</td>
+            <td>Set max height of the image. (Please enter a number.)</td>
+        </tr>
+        <tr>
+            <td>loading</td>
+            <td>'' (50%)</td>
+            <td>Please enter a address of the loading image</td>
+            <td>Set the the loading image</td>
+        </tr>
+    </table>
+    &nbsp;<h3>Examples</h3>
+    <h4>1、A simplest one</h4>
+    <pre class="brush: js;">
+        $(document).ready(function(){
+            $(".demo").windows({
+                width:965,
+                height:600,
+                title:"Image.js",
+                speed:1,
+                onOpen:function(){
+                    $.image.load({id:".wincontent",width:300,height:200,loading: "http://pic002.cnblogs.com/images/2012/155618/2012062710243954.gif"});
+                }
+            });
+        });
+    </pre>
+    <input id="demo1" type="button" value="Click me for demo"/><br />
+</body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#demo1").click(function(){
+            $(".demo").windows({
+                width:960,
+                height:600,
+                title:"Image.js",
+                speed:1,
+                onOpen:function(){
+                    $.image.load({id:".wincontent",width:300,height:200,loading: "http://pic002.cnblogs.com/images/2012/155618/2012062710243954.gif"});
+                }
+            });
+        });
+    });
+</script>
+</html>

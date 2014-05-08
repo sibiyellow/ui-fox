@@ -2,8 +2,8 @@
     $.extend({image:{
         setting:{
             id:"",
-            width:"auto",     //50%
-            height:"auto",   //50%
+            width:"auto",
+            height:"auto",
             loading:null
         }
     }});
