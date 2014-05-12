@@ -111,7 +111,7 @@ Methods
         </tr>
 </table><br>
 2、ui-fox.Image<br>
-   This is a simple Image scaling Library<br>
+   This is a simple Image scaling Library
     <h3>Options</h3>
     <table width="100%" border="1">
 <thead><tr>
