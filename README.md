@@ -1,4 +1,4 @@
-<p>1、Ys.windows<br>
+<p>1、ui-fox.windows<br>
 This is a simple modal window Library<br>
 Options
     </p><table width="100%" border="1">
@@ -110,7 +110,7 @@ Methods
             <td>Close all currently opened modal box. Called by $.window.close()..</td>
         </tr>
 </table><br>
-2、Ys.Image<br>
+2、ui-fox.Image<br>
    This is a simple Image scaling Library<br>
     <h3>
 <a name="user-content-options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h3>
