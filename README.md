@@ -112,8 +112,7 @@ Methods
 </table><br>
 2、ui-fox.Image<br>
    This is a simple Image scaling Library<br>
-    <h3>
-<a name="user-content-options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h3>
+    <h3>Options</h3>
     <table width="100%" border="1">
 <thead><tr>
 <th>Options</th>
